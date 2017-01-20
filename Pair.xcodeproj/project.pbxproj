@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		8D102DFB1E326CCE00A4BBC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D102DFA1E326CCE00A4BBC9 /* AppDelegate.swift */; };
-		8D102DFD1E326CCE00A4BBC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D102DFC1E326CCE00A4BBC9 /* ViewController.swift */; };
 		8D102E001E326CCE00A4BBC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D102DFE1E326CCE00A4BBC9 /* Main.storyboard */; };
 		8D102E021E326CCE00A4BBC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D102E011E326CCE00A4BBC9 /* Assets.xcassets */; };
 		8D102E051E326CCE00A4BBC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D102E031E326CCE00A4BBC9 /* LaunchScreen.storyboard */; };
+		8D102E131E326F8100A4BBC9 /* Person.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D102E111E326F8100A4BBC9 /* Person.xcdatamodeld */; };
+		8D102E151E326FAF00A4BBC9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D102E141E326FAF00A4BBC9 /* CoreDataStack.swift */; };
+		8D102E171E326FD300A4BBC9 /* Person + Convience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D102E161E326FD300A4BBC9 /* Person + Convience.swift */; };
+		8D102E1D1E32717F00A4BBC9 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D102E1C1E32717F00A4BBC9 /* PersonController.swift */; };
+		8D102E1F1E3271C800A4BBC9 /* PairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D102E1E1E3271C800A4BBC9 /* PairViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8D102DF71E326CCE00A4BBC9 /* Pair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D102DFA1E326CCE00A4BBC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D102DFC1E326CCE00A4BBC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8D102DFF1E326CCE00A4BBC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D102E011E326CCE00A4BBC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D102E041E326CCE00A4BBC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D102E061E326CCF00A4BBC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D102E121E326F8100A4BBC9 /* Person.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Person.xcdatamodel; sourceTree = "<group>"; };
+		8D102E141E326FAF00A4BBC9 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8D102E161E326FD300A4BBC9 /* Person + Convience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person + Convience.swift"; sourceTree = "<group>"; };
+		8D102E1C1E32717F00A4BBC9 /* PersonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		8D102E1E1E3271C800A4BBC9 /* PairViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,57 @@
 			isa = PBXGroup;
 			children = (
 				8D102DFA1E326CCE00A4BBC9 /* AppDelegate.swift */,
-				8D102DFC1E326CCE00A4BBC9 /* ViewController.swift */,
-				8D102DFE1E326CCE00A4BBC9 /* Main.storyboard */,
+				8D102E181E326FD800A4BBC9 /* Model + CoreData */,
+				8D102E1B1E32717000A4BBC9 /* Model Controller */,
+				8D102E1A1E326FF800A4BBC9 /* View */,
+				8D102E191E326FF100A4BBC9 /* View Controller */,
+				8D102E0E1E326E2900A4BBC9 /* Resources */,
+			);
+			path = Pair;
+			sourceTree = "<group>";
+		};
+		8D102E0E1E326E2900A4BBC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				8D102E011E326CCE00A4BBC9 /* Assets.xcassets */,
 				8D102E031E326CCE00A4BBC9 /* LaunchScreen.storyboard */,
 				8D102E061E326CCF00A4BBC9 /* Info.plist */,
 			);
-			path = Pair;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8D102E181E326FD800A4BBC9 /* Model + CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8D102E111E326F8100A4BBC9 /* Person.xcdatamodeld */,
+				8D102E141E326FAF00A4BBC9 /* CoreDataStack.swift */,
+				8D102E161E326FD300A4BBC9 /* Person + Convience.swift */,
+			);
+			name = "Model + CoreData";
+			sourceTree = "<group>";
+		};
+		8D102E191E326FF100A4BBC9 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8D102E1E1E3271C800A4BBC9 /* PairViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		8D102E1A1E326FF800A4BBC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D102DFE1E326CCE00A4BBC9 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8D102E1B1E32717000A4BBC9 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8D102E1C1E32717F00A4BBC9 /* PersonController.swift */,
+			);
+			name = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D102DFD1E326CCE00A4BBC9 /* ViewController.swift in Sources */,
 				8D102DFB1E326CCE00A4BBC9 /* AppDelegate.swift in Sources */,
+				8D102E131E326F8100A4BBC9 /* Person.xcdatamodeld in Sources */,
+				8D102E151E326FAF00A4BBC9 /* CoreDataStack.swift in Sources */,
+				8D102E1D1E32717F00A4BBC9 /* PersonController.swift in Sources */,
+				8D102E1F1E3271C800A4BBC9 /* PairViewController.swift in Sources */,
+				8D102E171E326FD300A4BBC9 /* Person + Convience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,8 +356,22 @@
 				8D102E0B1E326CCF00A4BBC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8D102E111E326F8100A4BBC9 /* Person.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8D102E121E326F8100A4BBC9 /* Person.xcdatamodel */,
+			);
+			currentVersion = 8D102E121E326F8100A4BBC9 /* Person.xcdatamodel */;
+			path = Person.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8D102DEF1E326CCE00A4BBC9 /* Project object */;
 }
